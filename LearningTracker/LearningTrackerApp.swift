@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct LearningTrackerApp: App {
+    
+    @State private var tracker: StudyTracker = StudyTracker()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(tracker)
         }
     }
 }
